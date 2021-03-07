@@ -1,5 +1,6 @@
 # Eddie's Content Managment System Version 2.0
 
+:warning: Under Construction: :construction:
 
 ### Site Purpose:
  I set up this site as a showcase of some of my more advanced website creation using the PHP language as well as jQuery, vanilla Javascript, Data Binding, General MVC framework use.
@@ -17,6 +18,6 @@ I also chose to display this knowlege using the PHP Framework named Laravel, thi
   * Page hirarchey
   * Blog Post Managment
 
-This list will expand as i improve the site during its development stage.
+:construction: This list will expand as i improve the site during its development stage. :construction:
 
-
+:godmode:
