@@ -1,4 +1,4 @@
-<h3><a href="https://eddiepower.github.io/CMSv2.0/">Eddies Content Management System</a></h3>
+<h3><a href="https://eddiepower.github.io/CMSv2.0/" target="_blank">Eddies Content Management System</a></h3>
 
 <p>
 Modules:
