@@ -5,6 +5,9 @@ Modules:
 
 <ul>
 	<li>User Managment</li>
+	<li>User Role Managment</li>
+	<li>Pages Managment</li>
+	<li>Blog Post Managment</li>
 </ul>
 
 </p>
