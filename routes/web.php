@@ -13,37 +13,30 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get("/", function () {
-  return view("welcome");
-});
+Route::get("/", ["App\Http\Controllers\HomeController", "index"])->name("home");
 
 Auth::routes();
 
 Route::get("/backend", function () {
-  return view("backend.index");
+    return view("backend.index");
 })
   ->middleware("Admin")
   ->name("backend");
 
 Route::resource(
-  "/backend/pages",
-  "App\Http\Controllers\Backend\PagesController",
-  ["except" => ["show"]]
+    "/backend/pages",
+    "App\Http\Controllers\Backend\PagesController",
+    ["except" => ["show"]]
 );
 
 Route::resource(
-  "/backend/blog",
-  "App\Http\Controllers\Backend\BlogController",
-  ["except" => ["show"]]
+    "/backend/blog",
+    "App\Http\Controllers\Backend\BlogController",
+    ["except" => ["show"]]
 );
 
 Route::resource(
-  "/backend/users",
-  "App\Http\Controllers\Backend\UsersController",
-  ["except" => ["create", "store", "show"]]
+    "/backend/users",
+    "App\Http\Controllers\Backend\UsersController",
+    ["except" => ["create", "store", "show"]]
 );
-
-Route::get("/home", [
-  App\Http\Controllers\HomeController::class,
-  "index",
-])->name("home");

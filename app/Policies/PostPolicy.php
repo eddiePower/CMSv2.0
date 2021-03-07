@@ -46,4 +46,9 @@ class PostPolicy
         // dd($user->id == $post->user_id);
         return $user->id == $post->user_id;
     }
+
+    public function ManagePost(User $user)
+    {
+        return $user->hasRole("Admin");
+    }
 }

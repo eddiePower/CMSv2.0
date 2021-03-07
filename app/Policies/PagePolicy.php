@@ -40,4 +40,9 @@ class PagePolicy
     {
         return $user->id == $page->user_id;
     }
+
+    public function ManagePage(User $user)
+    {
+        return $user->hasRole("Admin");
+    }
 }

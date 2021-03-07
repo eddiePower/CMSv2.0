@@ -34,56 +34,7 @@
                     <!-- Left Side Of Navbar -->
                     <ul class="navbar-nav ml-auto">
                         <!-- Authentication Links -->
-                        @guest
-
-                            @else
-                            @can('managePage', App\Models\Page::class)
-                                <li class="nav-item dropdown">
-                                    <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
-                                        Pages
-                                    </a>
-
-                                    <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
-                                        <a class="dropdown-item" href="{{ route('pages.index') }}">
-                                            {{ __('Pages List') }}
-                                        </a>
-                                        <a class="dropdown-item" href="{{ route('pages.create') }}">
-                                            {{ __('Create New Page') }}
-                                        </a>
-                                    </div>
-                                </li>
-                            @endcan
-                            @can('manageUser', App\Models\User::class)
-                                <li class="nav-item dropdown">
-                                    <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
-                                        Manage Users
-                                    </a>
-
-                                    <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
-                                        <a class="dropdown-item" href="{{ route('users.index') }}">
-                                            {{ __('Users List') }}
-                                        </a>
-                                    </div>
-                                </li>
-                            @endcan
-
-                            @can('managePost', App\Models\Post::class)
-                                <li class="nav-item dropdown">
-                                    <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
-                                        Blog Posts
-                                    </a>
-
-                                    <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
-                                        <a class="dropdown-item" href="{{ route('blog.index') }}">
-                                            {{ __('Posts List') }}
-                                        </a>
-                                        <a class="dropdown-item" href="{{ route('blog.create') }}">
-                                            {{ __('Create New Post') }}
-                                        </a>
-                                    </div>
-                                </li>
-                            @endcan
-                        @endguest
+                        @include('partials.nav')   
                     </ul>
 
                     <!-- Right Side Of Navbar -->
@@ -125,14 +76,14 @@
         </nav>
 
         <main class="py-4">
-            @yield('content')                                       
+            @yield('content')                                      
         </main>
     </div>
 
     <!-- Scripts -->
     <script src="{{ asset('js/app.js') }}"></script>
     {{-- <script src="{{ asset('js/admin-app.js') }}"></script> --}}
-    @yield('scripts')            
+    @yield('scripts')           
 </body>
 
 </html>
