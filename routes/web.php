@@ -13,6 +13,37 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
+Route::get("/", function () {
+  return view("welcome");
 });
+
+Auth::routes();
+
+Route::get("/backend", function () {
+  return view("backend.index");
+})
+  ->middleware("Admin")
+  ->name("backend");
+
+Route::resource(
+  "/backend/pages",
+  "App\Http\Controllers\Backend\PagesController",
+  ["except" => ["show"]]
+);
+
+Route::resource(
+  "/backend/blog",
+  "App\Http\Controllers\Backend\BlogController",
+  ["except" => ["show"]]
+);
+
+Route::resource(
+  "/backend/users",
+  "App\Http\Controllers\Backend\UsersController",
+  ["except" => ["create", "store", "show"]]
+);
+
+Route::get("/home", [
+  App\Http\Controllers\HomeController::class,
+  "index",
+])->name("home");
