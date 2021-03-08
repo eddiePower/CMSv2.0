@@ -1,4 +1,4 @@
-@extends('layouts.frontend')                   
+@extends('layouts.frontend')                       
 
 @section('content')
     <div class="container">
@@ -11,5 +11,7 @@
                 <p> {{ $post->excerpt }} </p>
             </article>
         @endforeach
+
+        {{ $posts->links() }}
     </div>
 @endsection

@@ -25,9 +25,9 @@ class StoreBlogRequest extends FormRequest
         return [
       //
       "title" => "required",
-      "excerpt" => "required",
       "slug" => "required",
       "published_at" => "nullable|date_format:Y-m-d h:i:s",
+      "excerpt" => "required",
       "body" => "required",
     ];
     }

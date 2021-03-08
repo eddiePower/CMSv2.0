@@ -1,5 +1,5 @@
 <!-- Equivalent for @csrf directive -->
-<input type="hidden" name="_token" value="{{ csrf_token() }}">
+{!! @csrf_field() !!}
 
 @if($errors->has('title'))
     <div class="alert alert-danger">
