@@ -1,6 +1,5 @@
 @foreach($pages as $page)
     @if(count($page->children))
-
         <li class="nav-item dropdown">
             <a href="#" class="nav-link dropdown-toggle" role="button" aria-expanded="false" data-toggle="dropdown">
                 {{ $page->title }} <span class="caret"></span></a>
@@ -13,7 +12,6 @@
 
             </div>
         </li>
-
     @else
         <li class="nav-item">
             <a href="{{ $page->url }}" class="nav-link" role="button" aria-expanded="false">

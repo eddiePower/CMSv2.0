@@ -8,6 +8,7 @@ Modules:
 	<li>User Role Managment</li>
 	<li>Pages Managment</li>
 	<li>Blog Post Managment</li>
+	<li>Page Hirarchy - Order</li>
 </ul>
 
 </p>

@@ -21,6 +21,11 @@ class Page extends Model
         return $this->belongsTo("App\Models\User");
     }
 
+    /*
+     * Desc: UpdatePageOrder is used to update our page hirarchy
+     * Input:
+     *
+     */
     public function UpdatePageOrder($order, $orderPage)
     {
         $relativePage = Page::findOrFail($orderPage);
