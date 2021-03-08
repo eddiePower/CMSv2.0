@@ -60,10 +60,11 @@ class PagesController extends Controller
      */
     public function store(WorkWithPage $request)
     {
+        $page = new Page($request->only(["title", "url", "content"]));
         //work with the values from edit and create pages
         Auth::user()
       ->pages()
-      ->save(new Page($request->only(["title", "url", "content"])));
+      ->save($page);
 
         $this->UpdatePageOrder($page, $request);
 

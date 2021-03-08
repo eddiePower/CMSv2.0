@@ -34,7 +34,10 @@
                     <!-- Left Side Of Navbar -->
                     <ul class="navbar-nav ml-auto">
                         <!-- Authentication Links -->
-                        @include('partials.nav')   
+
+                        <li><a class="nav-link" href="{{ route('blog') }}">{{ __('Blog') }}</a></li>
+
+                        @include('partials.nav')         
                     </ul>
 
                     <!-- Right Side Of Navbar -->
@@ -59,6 +62,7 @@
                                 </a>
 
                                 <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
+                                    <a href="{{ route('backend') }}" class="dropdown-item">Admin Dashboard</a>
                                     <a class="dropdown-item" href="{{ route('logout') }}" onclick="event.preventDefault();
                                                      document.getElementById('logout-form').submit();">
                                         {{ __('Logout') }}
@@ -76,14 +80,14 @@
         </nav>
 
         <main class="py-4">
-            @yield('content')                                      
+            @yield('content')                                            
         </main>
     </div>
 
     <!-- Scripts -->
     <script src="{{ asset('js/app.js') }}"></script>
     {{-- <script src="{{ asset('js/admin-app.js') }}"></script> --}}
-    @yield('scripts')           
+    @yield('scripts')                 
 </body>
 
 </html>

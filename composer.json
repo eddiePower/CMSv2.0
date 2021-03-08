@@ -15,7 +15,8 @@
         "kalnoy/nestedset": "^5.0",
         "laracasts/presenter": "^0.2.4",
         "laravel/framework": "^8.12",
-        "laravel/tinker": "^2.5"
+        "laravel/tinker": "^2.5",
+        "nesbot/carbon": "^2.45"
     },
     "require-dev": {
         "facade/ignition": "^2.5",

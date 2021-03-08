@@ -40,3 +40,7 @@ Route::resource(
     "App\Http\Controllers\Backend\UsersController",
     ["except" => ["create", "store", "show"]]
 );
+
+Route::get("/blog", "App\Http\Controllers\BlogPostController@index")->name(
+    "blog"
+);

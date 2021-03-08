@@ -47,6 +47,10 @@ class RouteServiceProvider extends ServiceProvider
         ->namespace($this->namespace)
         ->group(base_path("routes/web.php"));
         });
+
+        foreach (\App\Models\Page::all() as $page) {
+            Route::view($page->url, "home.page", ["page" => $page]);
+        }
     }
 
     /**

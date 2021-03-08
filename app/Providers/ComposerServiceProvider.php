@@ -25,7 +25,7 @@ class ComposerServiceProvider extends ServiceProvider
     public function boot()
     {
         //call our composer to to add our pages to our tree or page hirarchy
-        View::composer("home.*", function ($view) {
+        View::composer(["home.*", "blog.*"], function ($view) {
             $view->with("pages", \App\Models\Page::get()->toTree());
         });
     }
