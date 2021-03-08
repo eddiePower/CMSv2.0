@@ -44,3 +44,8 @@ Route::resource(
 Route::get("/blog", "App\Http\Controllers\BlogPostController@index")->name(
     "blog"
 );
+
+Route::get(
+    "/blog/{slug}",
+    "App\Http\Controllers\BlogPostController@View"
+)->name("blog.view");
